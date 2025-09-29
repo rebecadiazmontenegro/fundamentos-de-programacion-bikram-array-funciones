@@ -19,8 +19,8 @@ function potenciacion(a, b) {
     return a ** b; 
 }
 
-function separarPalabras(str) {
-    return str.split ("hola mundo");
+function separarPalabras(string) {
+    return string.split ("hola que tal?");
 }
 
 function repetirString (str, num) {
@@ -35,25 +35,24 @@ function esPrimo(num){
     for(let i = 2; i < num/2; i++) {
         if(num % i === 0) {
             return false;
-        } else {
-            return true;
-        }
+        } 
     }
+    return true;
 }
 
 //Mezclando arrays y funciones
 
-function ordenarArray(arr) {
-    return arr.sort (function (a,b) {
+function ordenarArray(array) {
+    return array.sort (function (a,b) {
         return a-b;
     });
 }
 
-function obtenerPares(arr) {
-    return arr.filter((number) => number % 2 === 0);
+function obtenerPares(array) {
+    return array.filter((number) => number % 2 === 0);
 }
 
-function pintarArray(arr) {
+function pintarArray(array) {
     let resultado = array[0].toString();
     for(let i = 1; i < array.length; i++) {
         resultado += ", " + array[i].toString();
@@ -61,7 +60,7 @@ function pintarArray(arr) {
     return "[" + resultado + "]";
 }
 
-function arrayMapi(arr,funcion) {
+function arrayMapi(array,funcion) {
     let arrayFuncion = [];
     for(let i = 0; i < array.length; i++) {
         arrayFuncion[i] = funcion(array[i]);
@@ -69,22 +68,23 @@ function arrayMapi(arr,funcion) {
     return arrayFuncion;
 }
 
-function eliminarDuplicados(arr){
+function eliminarDuplicados(array){
     let nuevoArray = [];
     for(let i = 0; i < array.length; i++) {
         if(!nuevoArray.includes(array[i])) {
         nuevoArray.push(array[i]);
         }
     }
+    return nuevoArray;
 }
 
 //Iteraciones :european_castle: proyecto :european_castle:
 //Arrays
 
-let arrayNumerosNeg = [-1, -2, -3, -4, -5, -6, -7, -8, -9];
-let holaMundo = ["hola", "mundo"];
+let arrayNumerosNeg = [ 0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
+let holaMundo = ["Hola", "Mundo"];
 let loGuardoTodo = ["hola", "que", 23, 42.33, "tal"];
-let arratDeArrays = [
+let arrayDeArrays = [
     [756, "nombre"],
     [225, "apellido"],
     [298, "direccion"],
@@ -136,8 +136,8 @@ function sumarArray(arr) {
 
 function multiplicarArray(arr) {
     let multiplicacionTotal = 1;
-    for( let i = 1; i < arr.length; i++) {
-        multiplicacionTotal += arr[i];
+    for(let i = 0; i < arr.length; i++) {
+        multiplicacionTotal *= arr[i];
     }
     return multiplicacionTotal;
 }
