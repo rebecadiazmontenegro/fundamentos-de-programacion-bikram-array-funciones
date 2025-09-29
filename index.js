@@ -20,7 +20,7 @@ function potenciacion(a, b) {
 }
 
 function separarPalabras(string) {
-    return string.split ("hola que tal?");
+    return string.split (" ");
 }
 
 function repetirString (str, num) {
